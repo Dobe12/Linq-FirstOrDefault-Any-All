@@ -12,9 +12,8 @@ namespace LINQextensions
             //All
             string[] cars = { "Alfa Romeo", "Aston Martin", "Audi", "Nissan", "Chevrolet",  "Chrysler", "Dodge", "BMW",
                             "Ferrari",  "Bentley", "Ford", "Lexus", "Mercedes", "Toyota", "Volvo", "Subaru", "Жигули :)"};
-            string wefwe = "wefwef";
 
-            Console.WriteLine("Linq:");
+            Console.WriteLine("DefaultLinq:");
 
             Console.WriteLine(cars.FirstOrDefault());
             Console.WriteLine(cars.FirstOrDefault(c => c.Contains("Ж")));
@@ -33,6 +32,7 @@ namespace LINQextensions
             TrueOrFalsePrint(cars.AnyMy(c => c.Contains("33333333333")));
             TrueOrFalsePrint(cars.AllMy(c => c.Contains("Toyota")));
             TrueOrFalsePrint(cars.AllMy(c => char.IsUpper(c[0])));
+
             Console.Read();
         }
 
